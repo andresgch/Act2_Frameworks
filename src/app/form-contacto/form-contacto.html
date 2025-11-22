@@ -1,0 +1,66 @@
+<div class="pt-1 pb-2 mt-0 px-1">
+    <div class="container py-5">
+        <h3 class="mt-2 mt-lg-5 mb-0 mb-lg-5 green-color text-center">
+            <strong>{{ title }}</strong>
+        </h3>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center mb-4">
+                <p class="fs-6 mb-0">Si tienes alguna pregunta, comentario o necesitas asistencia, no dudes en ponerte en contacto con nosotros.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <form [formGroup]="formComunicaciones" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre completo*</label>
+                        <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico*</label>
+                        <input type="text" class="form-control" id="email" name="email" formControlName="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Teléfono de contacto*</label>
+                        <input type="text" class="form-control" id="phone" name="phone" formControlName="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cuéntanos cómo podemos ayudarte</label>
+                        <textarea class="form-control" id="messaje" name="messaje" formControlName="messaje" aria-label="With textarea" required></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check ">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                        <label class="form-check-label " for="exampleCheck1">Acepto la <a href="#">política del manejo de datos</a></label>
+                    </div>
+                    
+                    <div class="text-center pt-3">
+                        <button type="submit" class="btn btn-green px-5"> 
+                            Enviar mi solicitud
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isModalVisible" class="modal d-block" tabindex="-1" role="dialog" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header b-green text-white">
+                <h5 class="modal-title">Solicitud Enviada</h5>
+                <button type="button" class="btn-close" aria-label="Close" (click)="hideModal()"></button>
+            </div>
+            <div class="modal-body text-center py-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#1c5052" class="bi bi-check-circle-fill mb-3" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.497 5.384 7.398a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <p class="fs-5 text-dark">Tu solicitud ha sido enviada con éxito!</p>
+                <p>Pronto nos pondremos en contacto contigo.</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-green" (click)="hideModal()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

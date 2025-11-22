@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg header-library py-3">
+    <div class="container">
+        <a class="navbar-brand m-0 p-0" href="">
+            <img src="assets/img/logo.svg" width="40%" alt="">
+        </a>
+        <button class="navbar-toggler btn-green" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div class="input-group w-100 mt-lg-0 mt-3 mb-3 mb-lg-0">
+                <input type="text" class="form-control border-0" placeholder="Buscar por título, autor o género..."
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text b-green border-0" id="basic-addon1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-search"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+            <div class="chart ms-4 d-flex justify-content-end">
+                <button type="button" class="btn btn-green me-2  open-panel nav-toggle position-relative"
+                    (click)="onCarritoClick()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-cart2"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                    </svg>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-light mt-1">
+                        1
+                    </span>
+                </button>
+                <a href="" target="_blank">
+                    <button type="button" class="btn btn-green px-5">
+                        Login
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

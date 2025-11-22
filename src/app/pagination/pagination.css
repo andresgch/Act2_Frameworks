@@ -1,0 +1,7 @@
+.b-green{
+    background-color: var(--main-green-color);
+}
+
+.green-color{
+    color: var(--main-green-color);
+}

@@ -1,0 +1,24 @@
+<main class="main">
+  <app-navbar (carritoToggle)="alternarCarrito()"></app-navbar>
+  <div class="bg-white border-bottom py-1">
+    <div class="container ">
+      <div class="row d-flex justify-content-between">
+        <div class="col-12">
+          <ul class="nav flex-nowrap flex-lg-wrap justify-content-start justify-content-lg-center">
+            <li class="nav-item"><a class="nav-link green-color" routerLink="/home">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link green-color" routerLink="/tienda">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link green-color" routerLink="/cafeteria">Cafetería</a></li>
+            <li class="nav-item"><a class="nav-link green-color" routerLink="/contactanos">Contáctanos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <router-outlet /> 
+
+  <div class="bg-dark text-white">
+    <app-footer></app-footer>
+  </div>
+</main>
+<app-cart [visible]="carritoVisible" (cerrarCarrito)="alternarCarrito()"></app-cart>

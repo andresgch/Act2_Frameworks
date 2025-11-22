@@ -1,0 +1,26 @@
+/*Header styles*/
+.btn-chart:hover{
+    background-color: #164041 !important;
+}
+
+.header-library{
+    background-color:#213635;
+    border-bottom: 5px solid #1c5052;
+}
+
+/* Estilos generales */
+.b-green{
+    background-color: #1c5052 !important; 
+}
+
+.b-dark-green{
+    background-color: #213635;
+}
+
+.btn-green{
+    background-color: #1c5052 !important;
+    color:#fff !important;
+    transition: all 300ms;
+    border: none !important;
+}
+

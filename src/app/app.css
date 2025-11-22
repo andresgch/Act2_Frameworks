@@ -1,0 +1,77 @@
+/*Header styles*/
+.btn-chart:hover{
+    background-color: #164041 !important;
+}
+
+.header-library{
+    background-color:#213635;
+    border-bottom: 5px solid #1c5052;
+}
+
+/* Estilos de los enlaces del menú principal */
+.nav-item .green-color {
+    color: #213635 !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-item .green-color:hover {
+    color: #164041 !important;
+}
+
+/* Estilos generales */
+.b-green{
+    background-color: #1c5052 !important; 
+}
+
+.b-dark-green{
+    background-color: #213635;
+}
+
+.btn-green{
+    background-color: #1c5052 !important;
+    color:#fff !important;
+    transition: all 300ms;
+    border: none !important;
+}
+
+.primary-nav {
+	position: fixed;
+	z-index: 1;
+}
+
+.openNav{
+    overflow: hidden;
+}
+
+ul.nav{
+    overflow-x: scroll;
+    width: calc(100% - 16px) !important;
+}
+
+button.hamburger.open-panel.nav-toggle.active {
+    transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.openNav .new-wrapper {
+	position: absolute;
+	transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+	-webkit-transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+	-ms-transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+	-o-transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.openNav .menu {
+	right: 0;
+	box-shadow: 3px 0px 10px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    ul.nav{
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,22 @@
+.b-green {
+    background-color: var(--main-green-color) ; 
+}
+.b-sel {
+    background-color: var(--dark-green-color); 
+    border: 3px solid var(--white);
+    cursor: pointer;
+}
+.card-category {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-green{
+    background-color: #1c5052;
+    color:#fff;
+    transition: all 300ms;
+    border: none;
+}
+
+.green-color{
+    color:#1c5052;
+}

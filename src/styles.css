@@ -1,0 +1,75 @@
+/* Fonts */
+@font-face {
+    font-family: 'DMSans-Bold';
+    src: url('./assets/fonts/DMSans-Bold.ttf');
+    font-style: normal;
+    font-weight: bold;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'DMSans-Regular';
+    src: url('./assets/fonts/DMSans-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'DMSans-Medium';
+    src: url('./assets/fonts/DMSans-Medium.ttf');
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+}
+
+/* Variables */
+:root{
+    --main-green-color: #1c5052;
+    --dark-green-color: #213635;
+
+    --white: #fff;
+    --dark: #000;
+
+    --ghost-white: #F2F3F7;
+
+    /* Grises claros */
+    --gray-50: #fafafa;   /* Muy claro */
+    --gray-100: #f5f5f5;
+    --gray-200: #eeeeee;
+    --gray-300: #e0e0e0;
+    --gray-400: #bdbdbd;
+    
+    /* Grises medios */
+    --gray-500: #9e9e9e;
+    --gray-600: #757575;
+    --gray-700: #616161;
+    
+    /* Grises oscuros */
+    --gray-800: #424242;
+    --gray-900: #212121;  /* Muy oscuro */
+}
+
+/* Estilos generales */
+body{
+    font-family: 'DMSans-Regular' !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'DMSans-Bold';
+}
+
+.green-color{
+    color:var(--main-green-color)
+}
+
+.btn-green{
+    background-color: #1c5052 !important;
+    color:#fff !important;
+    transition: all 300ms;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border-radius: 10px;
+}

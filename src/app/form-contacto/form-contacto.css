@@ -1,0 +1,9 @@
+.green-color{
+    color:#1c5052;
+}
+.btn-green{
+    background-color: #1c5052;
+    color:#fff;
+    transition: all 300ms;
+    border: none;
+}
