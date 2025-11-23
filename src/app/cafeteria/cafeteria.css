@@ -1,0 +1,10 @@
+.bold{
+  font-weight: bold;
+  font-family: 'DMSans-Bold';
+}
+
+.card-img{
+  height: 180px !important;
+  object-fit: cover;
+  margin-bottom: 15px;
+}

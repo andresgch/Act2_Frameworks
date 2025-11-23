@@ -1,0 +1,112 @@
+<div class="container mt-4 mb-5">
+  <div class="row">
+
+    <div class="col-6">
+      <h3 class="green-color ">Finalizar compra</h3>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+      <button (click)="volverAlCarrito()" class="btn btn-secondary mb-3 btn-green">
+        <span>Volver a Cafetería</span>
+      </button>
+    </div>
+
+    <!-- Paso 1: Resumen del Carrito REAL -->
+    <div class="seccion">
+      <h5 class="green-color">Tus Productos</h5>
+      @if (carritoService.productos.length === 0) {
+      <div class="carrito-vacio">
+        <p>Tu carrito está vacío</p>
+        <button (click)="volverAlCarrito()" class="btn btn-green">
+          Ir a la cafetería
+        </button>
+      </div>
+      } @else {
+      @for (producto of carritoService.productos; track producto.id; let i = $index) {
+      <div class="producto-item">
+        <img [src]="producto.imagen" [alt]="producto.nombre" class="producto-imagen">
+        <div class="producto-info">
+          <span class="producto-nombre">{{ producto.nombre }}</span>
+          <span class="producto-precio">€{{ producto.precio.toFixed(2) }}</span>
+        </div>
+      </div>
+      }
+      <div class="total">
+        <strong>Total: €{{ carritoService.total.toFixed(2) }}</strong>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="row">
+    @if (carritoService.productos.length > 0) {
+    <!-- Paso 2: Formulario de Dirección -->
+    <div class="col-6">
+      <div class="seccion">
+        <h5 class="green-color">Detalles del despacho</h5>
+        <form>
+          <div class="form-group mt-4">
+            <label for="nameInput" class="form-label">Nombre completo</label>
+            <input id="nameInput" type="text" [(ngModel)]="direccion.calle" name="calle" required class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="emailInput" class="form-label">Email:</label>
+            <input id="emailInput" type="text" [(ngModel)]="direccion.ciudad" name="ciudad" required
+              class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>¿Dónde deseas recibir tu pedido?</label>
+            <select class="form-select py-2">
+              <option selected>Selecciona una opción</option>
+              <option value="1">Mesa de Coworking</option>
+              <option value="2">Mostrador</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-6 d-flex flex-column justify-content-between">
+      <div class="seccion">
+        <h5 class="green-color">Método de Pago</h5>
+        <div class="metodo-pago">
+          <label>
+            <input type="radio" [(ngModel)]="metodoPago" value="tarjeta" name="pago1">
+            💳 Tarjeta de Crédito
+          </label>
+          <label>
+            <input type="radio" [(ngModel)]="metodoPago" value="paypal" name="pago2">
+            📧 PayPal
+          </label>
+          <label>
+            <input type="radio" [(ngModel)]="metodoPago" value="transferencia" name="pago3">
+            🏦 Transferencia
+          </label>
+        </div>
+      </div>
+      <div class="seccion">
+        @if (procesando) {
+        <div class="procesando">
+          <div class="spinner">⏳</div>
+          <p>Procesando tu pedido...</p>
+        </div>
+        } @else if (pedidoExitoso) {
+        <div class="exito">
+          <h5>🎉 ¡Pedido Completado!</h5>
+          <p>Tu número de pedido es: <strong>{{ numeroPedido }}</strong></p>
+          <p>Se envió confirmación a tu email. Pronto recibirás el pedido en tu mesa.</p>
+          <button (click)="volverACafeteria()" class="btn btn-primary">
+            Volver a la cafetería
+          </button>
+        </div>
+        } @else {
+        <button class="btn-comprar" (click)="procesarPedido()" [disabled]="!datosCompletos()">
+          Confirmar Compra
+        </button>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</div>

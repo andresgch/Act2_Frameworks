@@ -4,6 +4,7 @@ import { App } from './app';
 import { Home } from './home/home';
 import { Tienda } from './tienda/tienda';
 import { Cafeteria } from './cafeteria/cafeteria';
+import { CheckoutComponent } from './checkout/checkout';
 
 export const routes: Routes = [ 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: 'tienda', component: Tienda},
   { path: 'cafeteria', component: Cafeteria},
   { path: 'contactanos', component: FormContacto },
+  { path: 'checkout', component: CheckoutComponent },
 ];
